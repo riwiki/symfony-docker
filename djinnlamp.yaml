@@ -1,0 +1,23 @@
+command: docker-compose -f docker-compose.yml
+
+layers:
+  prod:
+  db:
+    - -f docker-compose.db.yml
+  dev:
+    - -f docker-compose.dev.yml
+  cron:
+    - -f docker-compose.cron.yml
+  cron+dev:
+    - -f docker-compose.cron.dev.yml
+  messanger:
+    - -f docker-compose.messanger.yml
+  messanger>db:
+  messanger+dev:
+    - -f docker-compose.messanger.dev.y
+  debug:
+    - -f docker-compose.debug.yml
+  debug>dev:
+  test:
+
+

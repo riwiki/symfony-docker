@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  db:
+    image: mariadb:10.5.9
+    environment:
+      - MYSQL_DATABASE=main
+      - MYSQL_ROOT_PASSWORD=foobar
+
+  app:
+    environment:
+      - DATABASE_URL=mysql://root:foobar@db:3306/main?serverVersion=mariadb-10.5.9

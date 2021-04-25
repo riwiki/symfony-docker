@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  app:
+    image: ${APP_NAME}:php-dev
+    build:
+      target: dev
+    volumes:
+      - ./app/:/var/www/:rw,cached
+    command: "symfony serve"
+    environment:
+      - APP_ENV=dev
