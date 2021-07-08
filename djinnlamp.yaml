@@ -11,13 +11,15 @@ layers:
   cron+dev:
     - -f docker-compose.cron.dev.yml
   messanger:
-    - -f docker-compose.messanger.yml
+    - -f docker-compose.messenger.yml
   messanger>db:
   messanger+dev:
-    - -f docker-compose.messanger.dev.y
+    - -f docker-compose.messenger.dev.y
   debug:
     - -f docker-compose.debug.yml
   debug>dev:
   test:
+  webpack-encore:
+    - run yarn encore dev-server additionally
 
 

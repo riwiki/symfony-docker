@@ -12,6 +12,9 @@ init-db:
 	./dc.sh run app composer require symfony/orm-pack
 	./dc.sh run app composer require --dev symfony/maker-bundle
 
+init-webpack-encore:
+	./dc.sh run app composer require symfony/webpack-encore-bundle
+
 up:
 	./dc.sh up
 
